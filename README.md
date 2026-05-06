@@ -1,2 +1,559 @@
-# tablero-proyectos
-Tablero de proyectos activos para seguimiento
+[tablero_proyectos.html](https://github.com/user-attachments/files/27456853/tablero_proyectos.html)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Tablero de Proyectos — Aceroservicios Ali S.A. de C.V.</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1e293b;}
+    .board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+    @media(max-width:1100px){.board{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:750px){.board{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:480px){.board{grid-template-columns:1fr;}}
+    @media print{body{background:white;}.page{padding:8px;}.board{gap:7px;}}
+  </style>
+</head>
+<body>
+<div class="page" style="max-width:1400px;margin:0 auto;padding:18px 20px 24px;">
+
+  <!-- HEADER -->
+  <div style="background:#1e293b;color:#fff;border-radius:12px;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px;">
+    <div>
+      <div style="font-size:1.15rem;font-weight:700;letter-spacing:-.3px;">📋 Tablero de Proyectos · Aceroservicios Ali S.A. de C.V.</div>
+      <div style="font-size:.78rem;color:#94a3b8;margin-top:2px;">Última actualización: Miércoles, 6 de mayo de 2026</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;"><div style="background:rgba(255,255,255,.1);border-radius:8px;padding:6px 14px;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#60a5fa;">19</div><div style="font-size:.65rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;">Clientes</div></div><div style="background:rgba(255,255,255,.1);border-radius:8px;padding:6px 14px;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#fbbf24;">22</div><div style="font-size:.65rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;">Pendientes</div></div><div style="background:rgba(255,255,255,.1);border-radius:8px;padding:6px 14px;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#f87171;">2</div><div style="font-size:.65rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;">Urgentes</div></div><div style="background:rgba(255,255,255,.1);border-radius:8px;padding:6px 14px;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#34d399;">2</div><div style="font-size:.65rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;">Cotizaciones</div></div></div>
+  </div>
+
+  <!-- LEYENDA -->
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center;">
+    <span style="font-size:.7rem;color:#64748b;font-weight:600;">Estado:</span>
+    <div style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:#64748b;background:white;border:1px solid #d1d5db;border-radius:20px;padding:3px 9px;"><div style="width:7px;height:7px;border-radius:50%;background:#3b82f6;"></div>En proceso</div><div style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:#64748b;background:white;border:1px solid #d1d5db;border-radius:20px;padding:3px 9px;"><div style="width:7px;height:7px;border-radius:50%;background:#f59e0b;"></div>Pendiente</div><div style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:#64748b;background:white;border:1px solid #d1d5db;border-radius:20px;padding:3px 9px;"><div style="width:7px;height:7px;border-radius:50%;background:#10b981;"></div>OK / Listo</div><div style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:#64748b;background:white;border:1px solid #d1d5db;border-radius:20px;padding:3px 9px;"><div style="width:7px;height:7px;border-radius:50%;background:#ef4444;"></div>Urgente</div><div style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:#64748b;background:white;border:1px solid #d1d5db;border-radius:20px;padding:3px 9px;"><div style="width:7px;height:7px;border-radius:50%;background:#8b5cf6;"></div>En espera</div>
+  </div>
+
+  <!-- TABLERO -->
+  <div class="board">
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #3b82f6;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#3b82f6;">Bravex</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">2 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Proyecto Quinta</div>
+          <div style="font-size:.7rem;color:#64748b;margin-top:2px;line-height:1.3;">IPR + Placas 1"</div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">✔ Cotización entregada</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">Mensaje enviado hoy a Luis</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Desarrollo Subestación</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">En proceso</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #10b981;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#10b981;">Bremer</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">3 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">IPR — Palapa Diego</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">✔ Instalada</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">PTR + Extensiones IPR — Palapa Diego</div>
+          <div style="font-size:.7rem;color:#64748b;margin-top:2px;line-height:1.3;">Instalación programada</div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">Pendiente instalación</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Pago Bremer</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fffbeb;color:#b45309;border:1px solid #fde68a;">💰 Pago hoy</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #8b5cf6;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#8b5cf6;">Wolong</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">5 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Producción General</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">✔ Prioridades definidas</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">En ejecución</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cotizaciones</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">Mayoría enviadas</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">Algunas pendientes</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">👤 Fer y Pao</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#8b5cf6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Tema Pinturas</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#faf5ff;color:#7c3aed;border:1px solid #ddd6fe;">En seguimiento</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Soldadura</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">En proceso</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Laminaciones</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #06b6d4;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#06b6d4;">V-Media</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">4 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">3 Parabuses — Producción</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">✔ Producción terminada</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">👤 Luis Maldonado</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Instalación</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">Pendiente instalación</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">2 Parabuses Grandes</div>
+          
+          
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Multipanel</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #f59e0b;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#f59e0b;">Frazier</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">3 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cal. 22×42"×134" (67")</div>
+          <div style="font-size:.7rem;color:#64748b;margin-top:2px;line-height:1.3;">1,360 + 5,600 = 6,960 pz → 76,560 kg</div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fffbeb;color:#b45309;border:1px solid #fde68a;">Cotización pendiente</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cal. 22×42"×73"</div>
+          <div style="font-size:.7rem;color:#64748b;margin-top:2px;line-height:1.3;">1,460 pz → 17,520 kg | Total: 94,080 kg</div>
+          
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Soleras 1/4 x 8</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #84cc16;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#84cc16;">Fabem</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">3 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">PO 800 y 75 pzas</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">✔ PO autorizada</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">PO Grande — 6,600 pzas Shims</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fffbeb;color:#b45309;border:1px solid #fde68a;">PO pendiente</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fffbeb;color:#b45309;border:1px solid #fde68a;">Shims Spacers</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#ef4444;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Pago efectivo</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff1f2;color:#dc2626;border:1px solid #fecaca;">Recordar a Mauricio</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">👤 Mauricio</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #0ea5e9;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#0ea5e9;">Gonzalo</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">1 proyecto</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#8b5cf6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Seguimiento proyecto</div>
+          <div style="font-size:.7rem;color:#64748b;margin-top:2px;line-height:1.3;">Piezas pendientes de APILSA</div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#faf5ff;color:#7c3aed;border:1px solid #ddd6fe;">Dar seguimiento con Fernando</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#faf5ff;color:#7c3aed;border:1px solid #ddd6fe;">Piezas APILSA</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">👤 Fernando</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #f97316;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#f97316;">George Fisher</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">4 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Junta con Quezar</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">Programar junta</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Definir tema pintura</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">Con Francisco Requejo</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">👤 Francisco Requejo</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Piezas Gil — Seguimiento maquinado</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">Seguimiento piezas maquinadas</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#8b5cf6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">OC Tags Metálicos</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#faf5ff;color:#7c3aed;border:1px solid #ddd6fe;">Seguimiento orden de compra</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #a855f7;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#a855f7;">COVO Steel</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">2 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#ef4444;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Seguimiento pedido placa 1"</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff1f2;color:#dc2626;border:1px solid #fecaca;">Seguimiento activo</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cotizacion de Placa 1.250"</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #ef4444;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#ef4444;">Tekser</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">2 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">PO Charolas Lego</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">PO por confirmar</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cotizacion Rejilla a Beatriz</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #d946ef;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#d946ef;">Retheau</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">1 proyecto</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Partiles Aluminio — Sandblast</div>
+          <div style="font-size:.7rem;color:#64748b;margin-top:2px;line-height:1.3;">Celaya</div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fffbeb;color:#b45309;border:1px solid #fde68a;">Mandar correo de seguimiento</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #64748b;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#64748b;">General / Producción</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">4 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Laser</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">✔ En operación</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">Producción en marcha</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">HIKARI — Pruebas maceteros y Fire Pit</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">Iniciar pruebas</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#3b82f6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Seguimiento Andrés — ALISSE</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;">Por seguir</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">👤 Andrés</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#10b981;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Seguimiento Fer Amaya — ISO 9001</div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;"><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;">ISO 9001</span><span style="font-size:.63rem;font-weight:700;border-radius:4px;padding:1px 5px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">👤 Fer Amaya</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #a855f7;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#a855f7;">Industrias RL</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">1 proyecto</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#8b5cf6;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cotizacion Tubos Laser NL y Leon</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #f43f5e;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#f43f5e;">Mario Tubos</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">2 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Entrega de tubos 62 pzas</div>
+          
+          
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Pendiente de pago</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #3b82f6;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#3b82f6;">Shaefer</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">1 proyecto</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Compra de Materia Prima Soleras</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #10b981;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#10b981;">TAPSA</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">1 proyecto</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Sandblast para tuberia</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #8b5cf6;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#8b5cf6;">MACERO</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">2 proyectos</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cotizacion placas 1/4</div>
+          
+          
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Platinas</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #06b6d4;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#06b6d4;">AFARQ</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">1 proyecto</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">Cotizaciones nuevas</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;border:1px solid #d1d5db;overflow:hidden;display:flex;flex-direction:column;border-left:4px solid #f59e0b;">
+      <div style="padding:9px 13px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;">
+        <div style="font-size:.9rem;font-weight:800;color:#f59e0b;">MAC Steel</div>
+        <span style="font-size:.65rem;color:#64748b;background:#f1f5f9;border-radius:10px;padding:2px 7px;">1 proyecto</span>
+      </div>
+      <div style="padding:10px 13px 12px;flex:1;">
+        
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed #e8ecf0;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0;background:#f59e0b;"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b;line-height:1.3;">OC para MAC Steel</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    </div></div>
+
+  <div style="margin-top:14px;text-align:center;font-size:.7rem;color:#94a3b8;">
+    Aceroservicios Ali S.A. de C.V. &nbsp;·&nbsp; Miércoles, 6 de mayo de 2026
+  </div>
+</div>
+</body>
+</html>
